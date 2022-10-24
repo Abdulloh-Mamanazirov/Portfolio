@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav class="container flex">
+        <div class="nav-icon">
+          <a href="#"><i class="fa-solid fa-a"></i></a>
+        </div>
+        <div class="nav-list">
+          <ul class="flex">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li>
+              <a href="https://github.com/Abdulloh-Mamanazirov">Portfolio</a>
+            </li>
+            <!-- <li>
+              <a
+              href="https://app.netlify.com/teams/abdulloh-mamanazirov/overview"
+              >Works</a
+              >
+            </li> -->
+            <div class="nav-btn">
+              <a class="btn" href="tel:+998949813606">Contact Me</a>
+            </div>
+          </ul>
+        </div>
+        <div class="hamb">
+          <label class="dropdown-title" for="drop"
+            ><i class="fa-solid fa-bars"></i
+          ></label>
+          <input type="checkbox" name="" id="drop" />
+          <div class="nav-list">
+            <ul class="flex">
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Services</a></li>
+              <li>
+                <a href="https://github.com/Abdulloh-Mamanazirov">Portfolio</a>
+              </li>
+              <div class="nav-btn">
+                <a class="btn" href="tel:+998949813606">Contact Me</a>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <!-- <i style="color: #fff;" class="fa-solid fa-bars"></i> -->
+      </nav>
+      <div class="header container flex">
+        <div class="header-text">
+          <h2>Hi, there!</h2>
+          <h1>I'm <span class="input"></span></h1>
+          <p class="p1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque eum
+            reiciendis doloribus. Nobis alias sequi autem at, deserunt
+            assumenda!
+          </p>
+          <div class="icons">
+            <a
+              href="https://www.instagram.com/abdulloh_mamanazirov/"
+              target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://t.me/Mr_Abdulloh" target="_blank"
+              ><i class="fa-brands fa-telegram"></i
+            ></a>
+            <a
+              href="https://app.netlify.com/teams/abdulloh-mamanazirov/overview"
+              target="_blank"
+              ><i
+                style="transform: rotate(45deg)"
+                class="fa-sharp fa-solid fa-square"
+              ></i
+            ></a>
+            <a href="https://github.com/Abdulloh-Mamanazirov/" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="tel:+998949813606"><i class="fa-solid fa-phone"></i></a>
+          </div>
+          <br />
+          <a href="#" class="btn">More About Me</a>
+          <p class="p2">&copy; 2022 Abdulloh - All Rights Reserved</p>
+        </div>
+        <div class="header-image">
+          <img src="images/man.png" alt="" />
+        </div>
+      </div>
+    </header>
+
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+      var typed = new Typed(".input", {
+        strings: [
+          "Abdulloh.",
+          "Web Developer.",
+          "UI Designer.",
+          "Frontend Developer.",
+        ],
+        typeSpeed: 60,
+        backSpeed: 60,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
