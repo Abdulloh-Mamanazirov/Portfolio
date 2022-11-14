@@ -1,6 +1,10 @@
+@import "about";
+@import "services";
+
 :root {
   --text-color: white;
   --secondary-color: #2ec0ff;
+  --gradient: #00a2ff;
 }
 
 * {
@@ -34,7 +38,8 @@
   font-size: 17px;
 }
 
-body {
+header {
+  height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)),
     url(../images/background.jpg);
   background-attachment: fixed;
@@ -102,11 +107,69 @@ nav {
     color: white;
     transform: scale(1.02);
     border: transparent;
-    background-color: var(--secondary-color);
+    background-image: linear-gradient(
+      to right,
+      var(--secondary-color),
+      var(--gradient)
+    );
   }
   .btn:active {
-    transform: scale(0.99);
+    transform: scale(0.999);
     opacity: 0.7;
+  }
+
+  .sidebar {
+    display: none;
+    label[for="side"] {
+      font-size: 35px;
+      color: var(--secondary-color);
+    }
+    .sidebar-menu {
+      z-index: 999;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      padding: 10px 60px;
+      width: 300px;
+      background-color: #005072;
+      background-image: linear-gradient(to top, #175976, #00243b);
+      box-shadow: 0 0 10px red inset;
+      transform: translateX(100%);
+
+      transition: all 0.3s;
+      label {
+        position: relative;
+        left: -30px;
+        transition: all 0.3s;
+        &:hover,
+        &:active {
+          color: red;
+          text-shadow: 0 0 10px red;
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        li {
+          a {
+            color: white;
+            transition: all 0.3s;
+          }
+          a:hover {
+            color: var(--secondary-color);
+          }
+          &:hover{
+            background-color: rgba(255, 255, 255, 0.246);
+          }
+        }
+      }
+    }
+    #side:checked + .sidebar-menu {
+      transform: translateX(0);
+    }
   }
 }
 
@@ -139,20 +202,25 @@ nav {
     padding: 15px 0 30px 0;
   }
   .p2 {
-    margin-top: 180px;
+    position: absolute;
+    bottom: 0;
   }
   .btn {
     color: var(--text-color);
-    background-color: var(--secondary-color);
+    background-image: linear-gradient(
+      to right,
+      var(--secondary-color),
+      var(--gradient)
+    );
     margin-top: 10px;
     width: 170px;
     height: 45px;
     transition: all 0.3s;
   }
   .btn:hover {
-    background-color: transparent;
     color: var(--secondary-color);
     border: 2px solid var(--secondary-color);
+    background-image: linear-gradient(transparent, transparent);
   }
 
   .icons {
@@ -172,7 +240,11 @@ nav {
       transition: all 0.3s;
     }
     i:hover {
-      background-color: var(--secondary-color);
+      background-image: linear-gradient(
+        to right,
+        var(--secondary-color),
+        var(--gradient)
+      );
     }
   }
 }
@@ -193,7 +265,8 @@ nav {
 
 @media screen and (max-width: 930px) {
   .container {
-    margin: 0 20px;
+    width: 90%;
+    margin: 0 auto;
   }
   .header-text {
     padding-top: 100px;
@@ -208,58 +281,33 @@ nav {
       margin-top: 130px;
     }
   }
-  nav .hamb {
-    display: initial;
-  }
-  nav ul {
-    position: absolute;
-    display: flex;
-    flex-flow: column;
-  }
-  .nav-list {
-    text-align: center;
-    position: relative;
-    left: -320px;
-    margin: 10px 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s;
-    .nav-btn,
-    li {
-      padding: 7px 0;
-      width: 300px;
-      background-color: rgba(29, 29, 29, 0.806);
-      // border-radius: 7px;
-      &:hover {
-        background-color: rgba(58, 58, 58, 0.819);
-      }
-      &:first-child {
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-      }
-      &:last-child {
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-      }
+  nav {
+    margin: 0;
+    .sidebar {
+      display: initial;
     }
-    .nav-btn {
-      padding-bottom: 10px;
-      position: relative;
-      right: 25px;
-      background-color: rgba(29, 29, 29, 0.806);
+    .nav-list {
+      display: none;
     }
   }
-  #drop {
-    display: none;
-  }
-
-  #drop:checked + .nav-list {
-    opacity: 1;
-    visibility: visible;
-  }
-
   .header-image {
     display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  nav {
+    .sidebar {
+      .sidebar-menu {
+        padding:10px 0;
+        text-align: left;
+        width: 60%;
+        
+        label{
+          padding-left: 50px;
+        }
+      }
+    }
   }
 }
 
