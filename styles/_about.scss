@@ -1,9 +1,99 @@
+body {
+background-color:#000;
+}
 
-.navbar{
+.navbar {
   position: sticky;
-  top:0;
+  top: 0;
   z-index: 9999;
-  background-color: #fff;
   box-shadow: 0 0 5px grey;
   padding-bottom: 10px;
+}
+
+.sidebar {
+  height: 100%;
+  z-index: 999;
+}
+
+#about {
+  margin-top: 70px;
+  color: #fff;
+  h4{
+    color: var(--secondary-color);
+  }
+  h2{
+    font-size: 30px;
+    padding: 15px 0;
+  }
+  p{
+    color:#f1f0e9;
+  }
+  .btn {
+    margin-top: 15px;
+    filter: contrast(1.4);
+    color: #fff;
+    border: transparent;
+    background-image: linear-gradient(
+      to right,
+      var(--secondary-color),
+      var(--gradient)
+    );
+    transition: all 0.3s;
+    &:hover {
+      filter: contrast(1);
+      border: 2px solid var(--secondary-color);
+      color: var(--secondary-color);
+      background-image: linear-gradient(transparent, transparent);
+    }
+  }
+}
+
+#personal {
+  margin-top: 50px;
+  color: #fff;
+  ul{
+    li{
+      span{
+      color: #a9a9a9;
+    }
+  }
+}
+  .personal-text {
+    border-right:3px solid #fff;
+    h2 {  
+      text-align: center;
+    }
+    ul {
+      text-align: center;
+      li{
+        padding-top: 5px;
+      }
+    }
+  }
+  .education-text {
+    h2 {
+      text-align: center;
+    }
+    ul {
+      text-align: center;
+      li{
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+
+@media (max-width:700px) {
+  #personal{
+    flex-direction: column;
+    .personal-text{
+      border-right:none;
+      padding-bottom: 40px;
+      border-bottom: 3px solid #fff;
+    }
+    .education-text{
+      padding: 40px 0;
+    }
+  }
 }

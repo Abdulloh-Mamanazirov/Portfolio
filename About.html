@@ -11,22 +11,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/A.svg" type="image/x-icon">
     <title>About</title>
   </head>
   <body>
     <div class="navbar">
       <nav class="container flex">
         <div class="nav-icon">
-          <a href="./index.html"><i class="fa-solid fa-a"></i></a>
+          <a href="#"><i class="fa-brands fa-autoprefixer"></i></a>
         </div>
         <div class="nav-list">
           <ul class="flex">
             <li><a href="./index.html">Home</a></li>
-            <li><a href="./About.html">About</a></li>
             <li><a href="./Services.html">Services</a></li>
             <li>
-              <a href="https://github.com/Abdulloh-Mamanazirov">Portfolio</a>
+              <a href="https://github.com/Abdulloh-Mamanazirov" target="_blank">Portfolio</a>
             </li>
             <!-- <li>
               <a
@@ -35,7 +36,7 @@
               >
             </li> -->
             <div class="nav-btn">
-              <a class="btn" href="tel:+998949813606">Contact Me</a>
+              <a class="btn" href="./contact.html">Contact Me</a>
             </div>
           </ul>
         </div>
@@ -59,5 +60,54 @@
         </div>
       </nav>
     </div>
+
+    <section id="about" class="container">
+      <div data-aos="fade-down" data-aos-duration="800" class="about-text">
+        <h4>I'm Web Developer</h4>
+        <h2>More About Me</h2>
+        <p>
+Hi, I’m Abdulloh. I'm a young and energetic person who enjoys coding and it's become part of my life. I finished several projects despite starting this job recently.  
+<br><br>
+I don’t like to define myself by the work I’ve done. I define myself by the work I want to do. Skills can be taught, personality is inherent. I prefer to keep learning, continue challenging myself, and do interesting things that matter.
+<br><br>
+Fueled by high energy levels and boundless enthusiasm, I’m easily inspired and more then willing to follow my fascinations wherever they take me. I’m passionate, expressive, multi-talented spirit with a natural ability to entertain and inspire. I’m never satisfied to just come up with ideas. Instead I have an almost impulsive need to act on them.
+<br><br>
+My energy fuels me in the pursuit of many interests, hobbies, areas of study and artistic endeavors. I’m a fast learner, able to pick up new skills and juggle different projects and roles with relative ease.
+        </p>
+
+        <a href="#" class="btn">Hire me</a>
+      </div>
+    </section>
+
+    <section id="personal" class="container flex">
+      <div class="personal-text portion">
+        <h2 data-aos="fade-right" data-aos-duration="800">Personal Information</h2>
+        <ul data-aos="fade-right" data-aos-duration="800">
+          <li><span>Name:</span>  Abdulloh</li>
+          <li><span>Last Name:</span>  Mamanazirov</li>
+          <li><span>Age:</span>  17</li>
+          <li><span>Birth date:</span>  12/09/2006</li>
+          <li><span>Birth place:</span>  Norin, Namangan, Uzbekistan</li>
+          <li><span>Nationality:</span>  Uzbek</li>
+        </ul>
+      </div>
+      <div class="education-text portion" data-aos="fade-left" data-aos-duration="800">
+        <h2>Education</h2>
+        <ul>
+          <li><span>School: </span> 2012-2021</li>
+          <li><span>High school:</span>  2021-2023</li>
+          <li><span>Programming course:</span>  2022-2023</li>
+        </ul>
+      </div>
+    </section>
+
+
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
   </body>
 </html>

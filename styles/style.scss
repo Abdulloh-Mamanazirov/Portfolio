@@ -26,6 +26,11 @@
   display: flex;
 }
 
+.portion{
+  flex: 1;
+}
+
+
 .btn {
   border-radius: 30px;
   display: inline-flex;
@@ -33,7 +38,6 @@
   justify-content: center;
   width: 150px;
   height: 40px;
-  border: 1px solid grey;
   font-weight: 600;
   font-size: 17px;
 }

@@ -1,16 +1,113 @@
+body {
+  background-color: #000;
+}
+
 .navbar {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 9999;
-  background-color: #fff;
   -webkit-box-shadow: 0 0 5px grey;
           box-shadow: 0 0 5px grey;
   padding-bottom: 10px;
 }
 
-body {
-  background-color: #aaa;
+.sidebar {
+  height: 100%;
+  z-index: 999;
+}
+
+#about {
+  margin-top: 70px;
+  color: #fff;
+}
+
+#about h4 {
+  color: var(--secondary-color);
+}
+
+#about h2 {
+  font-size: 30px;
+  padding: 15px 0;
+}
+
+#about p {
+  color: #f1f0e9;
+}
+
+#about .btn {
+  margin-top: 15px;
+  -webkit-filter: contrast(1.4);
+          filter: contrast(1.4);
+  color: #fff;
+  border: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--secondary-color)), to(var(--gradient)));
+  background-image: linear-gradient(to right, var(--secondary-color), var(--gradient));
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#about .btn:hover {
+  -webkit-filter: contrast(1);
+          filter: contrast(1);
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+  background-image: linear-gradient(transparent, transparent);
+}
+
+#personal {
+  margin-top: 50px;
+  color: #fff;
+}
+
+#personal ul li span {
+  color: #a9a9a9;
+}
+
+#personal .personal-text {
+  border-right: 3px solid #fff;
+}
+
+#personal .personal-text h2 {
+  text-align: center;
+}
+
+#personal .personal-text ul {
+  text-align: center;
+}
+
+#personal .personal-text ul li {
+  padding-top: 5px;
+}
+
+#personal .education-text h2 {
+  text-align: center;
+}
+
+#personal .education-text ul {
+  text-align: center;
+}
+
+#personal .education-text ul li {
+  padding-top: 20px;
+}
+
+@media (max-width: 700px) {
+  #personal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #personal .personal-text {
+    border-right: none;
+    padding-bottom: 40px;
+    border-bottom: 3px solid #fff;
+  }
+  #personal .education-text {
+    padding: 40px 0;
+  }
 }
 
 .navbar {
@@ -55,6 +152,12 @@ body {
   display: flex;
 }
 
+.portion {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 .btn {
   border-radius: 30px;
   display: -webkit-inline-box;
@@ -68,7 +171,6 @@ body {
           justify-content: center;
   width: 150px;
   height: 40px;
-  border: 1px solid grey;
   font-weight: 600;
   font-size: 17px;
 }
