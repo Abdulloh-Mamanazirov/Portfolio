@@ -2,19 +2,6 @@ body {
 background-color:#000;
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-  box-shadow: 0 0 5px grey;
-  padding-bottom: 10px;
-}
-
-.sidebar {
-  height: 100%;
-  z-index: 999;
-}
-
 #about {
   margin-top: 70px;
   color: #fff;
