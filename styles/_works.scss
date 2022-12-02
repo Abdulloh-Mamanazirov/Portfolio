@@ -13,7 +13,7 @@
       margin-top: 20px;
       align-items: center;
       .site-img {
-        border: 2px solid blue;
+        border: 2px solid var(--secondary-color);
         border-radius: 10px;
         height: 300px;
         overflow: hidden;
@@ -34,9 +34,9 @@
         }
         a {
           letter-spacing: 5px;
-          transition: all 0.3s;
+          transition: all 0.2s;
           &:hover {
-            color: #0084ff;
+            color: var(--secondary-color);
           }
           &:active {
             border-bottom: 1px solid #fff;
@@ -60,14 +60,40 @@
     .js-works {
       gap: 13px;
       .box {
-        border: 2px solid blue;
+        border: 2px solid var(--secondary-color);
         border-radius: 10px;
         padding: 10px 10px 5px;
         display: flex;
         flex-direction: column;
         text-align: center;
+        h4{
+          font-size: 20px;
+        }
         p {
-          margin: 7px 0;
+          margin: 5px 0;
+          opacity: .8;
+        }
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    .websites {
+      .site {
+        flex-direction: column;
+      }
+      .site:nth-child(2) img{
+        height: 400px;
+      }
+      .site:nth-child(even) {
+        text-align: left;
+        flex-direction: column;
+      }
+    }
+    .js{
+      .js-works{
+        flex-direction: column;
+        img{
+          width: 50%;
         }
       }
     }
