@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -95,13 +96,36 @@
           <p class="p2">&copy; 2022 Abdulloh - All Rights Reserved</p>
         </div>
         <div class="header-image" data-aos="fade-left" data-aos-duration="800">
-          <img src="images/man.png" alt="man" />
+          <!-- <img src="images/man.png" alt="man" /> -->
+          <model-viewer
+      src="./3d_model/scene.gltf"
+      alt="A 3D model of a car"
+      shadow-intensity="1"
+      auto-rotate
+      rotate-speed="500"
+      ar
+    >
+    </model-viewer>
+
+    <!-- 💁 Include both scripts below to support all browsers! -->
+
+    <!-- Loads <model-viewer> for modern browsers: -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
         </div>
       </div>
     </header>
 
     <section id="about" class="container">
-      <div data-aos="fade-down" data-aos-duration="800" data-aos-offset="200" class="about-text">
+      <div data-aos="fade-down" data-aos-duration="800" data-aos-offset="100" class="about-text">
         <h4>I'm Web Developer</h4>
         <h2>More About Me</h2>
         <p>
@@ -143,17 +167,17 @@ My energy fuels me in the pursuit of many interests, hobbies, areas of study and
     <section id="services" class="container">
       <h2>Services</h2>
       <div class="boxes flex">
-        <div data-aos="flip-up" data-aos-duration="800" data-aos-offset="300" class="box portion">
+        <div data-aos="flip-up" data-aos-duration="800" data-aos-offset="220" class="box portion">
           <img src="images/coding.png" alt="coding" width="120">
           <h3>Web Developer</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde neque repellendus quae eum ipsa, maiores modi minima perspiciatis eaque aut. Neque, quae nostrum! Sit doloribus, assumenda deleniti ipsam praesentium nemo.</p>
         </div>
-        <div data-aos="flip-up" data-aos-duration="800" data-aos-offset="300" class="box portion">
+        <div data-aos="flip-up" data-aos-duration="800" data-aos-offset="220" class="box portion">
           <img src="images/ux.png" alt="UX" width="120">
           <h3>Frontend Developer</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde neque repellendus quae eum ipsa, maiores modi minima perspiciatis eaque aut. Neque, quae nostrum! Sit doloribus, assumenda deleniti ipsam praesentium nemo.</p>
         </div>
-        <div data-aos="flip-up" data-aos-duration="800" data-aos-offset="300" class="box portion">
+        <div data-aos="flip-up" data-aos-duration="800" data-aos-offset="220" class="box portion">
           <img src="images/layers.png" alt="graphic" width="120">
           <h3>Graphic Designer</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde neque repellendus quae eum ipsa, maiores modi minima perspiciatis eaque aut. Neque, quae nostrum! Sit doloribus, assumenda deleniti ipsam praesentium nemo.</p>
@@ -173,12 +197,12 @@ My energy fuels me in the pursuit of many interests, hobbies, areas of study and
         </div>
       </div>
         <div class="boxes flex">
-          <div data-aos="fade-down-right" class="box portion">
+          <div data-aos="fade-up-right" class="box portion">
             <img src="./images/framework.webp" alt="framework" width="150">
             <h4>CSS Frameworks</h4>
             <p>Bootstrap is the most popular CSS Framework for developing responsive and mobile-first websites</p>
           </div>
-          <div data-aos="fade-down-left" class="box portion">
+          <div data-aos="fade-up-left" class="box portion">
             <img src="./images/sass.png" alt="sass" width="170">
             <h4>Sass</h4>
             <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world</p>
@@ -190,53 +214,53 @@ My energy fuels me in the pursuit of many interests, hobbies, areas of study and
       <h2>Works</h2>
       <div class="websites">
         <div class="site flex">
-          <div data-aos="flip-left" data-aos-duration="1000" data-aos-offset="120" class="site-img portion">
+          <div data-aos="flip-left" data-aos-duration="1000" data-aos-offset="60" class="site-img portion">
             <a target="_blank" href="https://monit0.netlify.app"><img width="100%" height="100%" src="./images/thumbnails/monito.jpg" alt="monito"></a>
           </div>
-          <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="120"  class="site-text portion">
+          <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="60"  class="site-text portion">
             <h3>Monito</h3>
             <p>Fully responsive website for the sale of pets and necessary objects for them.</p>
             <a target="_blank" href="https://monit0.netlify.app">LINK TO WEBSITE</a>
           </div>
         </div>
         <div class="site flex">
-          <div data-aos="flip-right" data-aos-duration="1000" data-aos-offset="120" class="site-img portion">
-            <a target="_blank" href="https://.netlify.app"><img width="100%" height="100%" src="./images/thumbnails/Pixer.jpg" alt="pixer"></a>
+          <div data-aos="flip-right" data-aos-duration="1000" data-aos-offset="60" class="site-img portion">
+            <a target="_blank" href="https://pixar-websitee.netlify.app"><img width="100%" height="100%" src="./images/thumbnails/Pixer.jpg" alt="pixer"></a>
           </div>
-          <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="120"  class="site-text portion">
+          <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="60"  class="site-text portion">
             <h3>Pixer</h3>
             <p>This is a website for improving Businnes system of a company. The site is available in Uzbek.</p>
-            <a target="_blank" href="https://.netlify.app">LINK TO WEBSITE</a>
+            <a target="_blank" href="https://pixar-websitee.netlify.app">LINK TO WEBSITE</a>
           </div>
         </div>
         <div class="site flex">
-          <div data-aos="flip-left" data-aos-duration="1000" data-aos-offset="120" class="site-img portion">
-            <a target="_blank" href="https://.netlify.app"><img width="100%" height="100%" height="300" src="./images/thumbnails/coffee.png" alt="coffee"></a>
+          <div data-aos="flip-left" data-aos-duration="1000" data-aos-offset="60" class="site-img portion">
+            <a target="_blank" href="https://coffee-roasterr.netlify.app"><img width="100%" height="100%" height="300" src="./images/thumbnails/coffee.png" alt="coffee"></a>
           </div>
-          <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="120"  class="site-text portion">
+          <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="60"  class="site-text portion">
             <h3>Coffee Roaster</h3>
             <p>This responsive website is for cafes or restaurants' coffee system. Only frontend part.</p>
-            <a target="_blank" href="https://.netlify.app">LINK TO WEBSITE</a>
+            <a target="_blank" href="https://coffee-roasterr.netlify.app">LINK TO WEBSITE</a>
           </div>
         </div>
         <div class="site flex">
-          <div data-aos="flip-right" data-aos-duration="1000" data-aos-offset="120" class="site-img portion">
-            <a target="_blank" href="https://.netlify.app"><img width="100%" height="100%" height="300" src="./images/thumbnails/Login.jpg" alt="login"></a>
+          <div data-aos="flip-right" data-aos-duration="1000" data-aos-offset="60" class="site-img portion">
+            <a target="_blank" href="https://log-in-page-bootstrap.netlify.app"><img width="100%" height="100%" height="300" src="./images/thumbnails/Login.jpg" alt="login"></a>
           </div>
-          <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="120"  class="site-text portion">
+          <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="60"  class="site-text portion">
             <h3>Login page</h3>
             <p>This Login page is user-friendly and easy to use. Website is responsive and can be used in bulding other websites</p>
-            <a target="_blank" href="https://.netlify.app">LINK TO WEBSITE</a>
+            <a target="_blank" href="https://log-in-page-bootstrap.netlify.app">LINK TO WEBSITE</a>
           </div>
         </div>
         <div class="site flex">
-          <div data-aos="flip-left" data-aos-duration="1000" data-aos-offset="120" class="site-img portion">
-            <a target="_blank" href="https://.netlify.app"><img width="100%" height="100%" src="./images/thumbnails/salon.jpg" alt="salon"></a>
+          <div data-aos="flip-left" data-aos-duration="1000" data-aos-offset="60" class="site-img portion">
+            <a target="_blank" href="https://barbershop-salon.netlify.app"><img width="100%" height="100%" src="./images/thumbnails/salon.jpg" alt="salon"></a>
           </div>
-          <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="120"  class="site-text portion">
+          <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="60"  class="site-text portion">
             <h3>Barbershop salon</h3>
             <p>Webpage is for barbershops and is used to give informtion to a user about the place and its services. All information you need to know about the barbershop is included in the website</p>
-            <a target="_blank" href="https://.netlify.app">LINK TO WEBSITE</a>
+            <a target="_blank" href="https://barbershop-salon.netlify.app">LINK TO WEBSITE</a>
           </div>
         </div>
         <!-- <div class="site flex">
@@ -253,30 +277,30 @@ My energy fuels me in the pursuit of many interests, hobbies, areas of study and
       <div class="js">
         <h3>Small JavaScript programs</h3>
         <div class="js-works flex">
-          <div class="box portion">
-            <h4>Title</h4> 
-            <p>Lorem ipsum dolor sit amet.</p>
-            <a href=""><img src="./images/coding.png" width="100%" height="100%" alt="js-work"></a>
+          <div data-aos="fade-right" data-aos-delay="300" class="box portion">
+            <h4>Counter</h4> 
+            <p>Simple responsive counter website </p>
+            <a href="https://counter-program.netlify.app"><img src="./images/counter.png" width="100%" height="100%" alt="js-work"></a>
           </div>
-          <div class="box portion">
-            <h4>Title</h4> 
-            <p>Lorem ipsum dolor sit amet.</p>
-            <a href=""><img src="./images/coding.png" width="100%" height="100%" alt="js-work"></a>
+          <div data-aos="fade-right" data-aos-delay="400" class="box portion">
+            <h4>Age calculator</h4> 
+            <p>Age calculator web page</p>
+            <a href="https://age-calculator-website.netlify.app"><img src="./images/population.png" width="100%" height="100%" alt="js-work"></a>
           </div>
-          <div class="box portion">
-            <h4>Title</h4> 
-            <p>Lorem ipsum dolor sit amet.</p>
-            <a href=""><img src="./images/coding.png" width="100%" height="100%" alt="js-work"></a>
+          <div data-aos="fade-right" data-aos-delay="500" class="box portion">
+            <h4>Slot game</h4> 
+            <p>Jackpot machine</p>
+            <a href="https://slot-game-js.netlify.app"><img src="./images/jackpot-machine.png" width="100%" height="100%" alt="js-work"></a>
           </div>
-          <div class="box portion">
+          <div data-aos="fade-right" data-aos-delay="600" class="box portion">
             <h4>Title</h4> 
             <p>Lorem ipsum dolor sit amet.</p>
-            <a href=""><img src="./images/coding.png" width="100%" height="100%" alt="js-work"></a>
+            <a href="https://.netlify.app"><img src="./images/coding.png" width="100%" height="100%" alt="js-work"></a>
           </div>
-          <div class="box portion">
+          <div data-aos="fade-right" data-aos-delay="700" class="box portion">
             <h4>Title</h4> 
             <p>Lorem ipsum dolor sit amet.</p>
-            <a href=""><img src="./images/coding.png" width="100%" height="100%" alt="js-work"></a>
+            <a href="https://.netlify.app"><img src="./images/coding.png" width="100%" height="100%" alt="js-work"></a>
           </div>
         </div>
       </div>

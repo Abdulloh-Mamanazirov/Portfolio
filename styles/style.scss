@@ -282,6 +282,13 @@ nav {
 }
 
 .header-image {
+  model-viewer{
+    position: relative;
+    top: -100px;
+    left: 20px;
+    width: 500px;
+    height: 600px;
+  }
   padding-top: 90px;
   img {
     background-image: linear-gradient(
@@ -322,7 +329,7 @@ nav {
       display: none;
     }
   }
-  .header-image {
+  .header-image , model-viewer{
     display: none;
   }
 }
