@@ -8,6 +8,28 @@
   --secondary-color: #2ec0ff;
   --gradient: #00a2ff;
 }
+*::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #000;
+	border-radius: 10px;
+}
+
+*::-webkit-scrollbar{
+	width: 7px;
+  border-radius: 20px;
+	background-color: #fff;
+}
+
+*::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+  background-image: repeating-linear-gradient(var(--secondary-color), var(--gradient));
+}
 
 * {
   margin: 0;
